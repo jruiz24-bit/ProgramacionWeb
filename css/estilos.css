@@ -1,0 +1,25 @@
+p{
+    background-color: aquamarine;
+}
+
+
+.mi_parrafo:hover{
+    background-color: blueviolet;
+}
+
+ul{
+    background-color: brown;
+}
+
+ul li:first-child{
+    background-color: chartreuse;
+}
+
+ul li:last-child{
+    background-color: blue;
+}
+
+a:hover{
+    background-color: bisque;
+}
+
