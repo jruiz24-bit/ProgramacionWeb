@@ -72,3 +72,47 @@ a {
     text-decoration: underline;
     font-weight: bold; 
 }
+
+
+
+.caja-negra {
+    background-color: black;
+    color: white;
+    
+    padding: 20px; 
+    
+   
+    margin-bottom: 30px; 
+}
+
+
+.caja-roja {
+    background-color: #f44336;
+    color: black;
+    
+
+    padding: 15px;
+    
+    margin-bottom: 25px;
+    
+    border: 5px solid white;
+    
+    outline: 6px solid #f44336;
+    
+    border-radius: 8px; 
+}
+
+
+.resaltado-amarillo {
+    background-color: yellow; 
+}
+
+.lista-tachada {
+    background-color: yellow;
+    text-decoration: line-through; 
+}
+
+.lista-negra {
+    background-color: black;
+    color: white; 
+}
