@@ -116,3 +116,23 @@ a {
     background-color: black;
     color: white; 
 }
+
+
+
+.contenedor-imagen {
+    
+    background-image: url('../img/descarga.jpg'); 
+    
+    
+    background-repeat: no-repeat;
+    
+   
+    background-position: center;
+    
+    
+    background-size: contain; 
+    
+    background-color: #333333; 
+    color: white; 
+    padding: 50px; 
+}
