@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="registro-container">
+        <h2>Registro de Usuario</h2>
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <label>Nombre(s)</label>
+                <input type="text" id="nombres" onkeypress="validarLetras(event)">
+            </div>
+
+            <div class="form-group">
+                <label>Apellido(s)</label>
+                <input type="text" id="apellidos" onkeypress="validarLetras(event)">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" id="telefono" onkeypress="validarNumeros(event)">
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="text" id="correo" onkeypress="validarCorreo(event)">
+            </div>
+
+            <div class="form-group">
+                <label>Género</label>
+                <select id="genero">
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Biografía</label>
+                <textarea id="biografia" rows="4" onkeyup="actualizarContador()"></textarea>
+                <span id="contador">0 caracteres</span>
+            </div>
+
+            <button type="button" class="btn-guardar">Guardar cambios</button>
+        </form>
+    </div>
+
+</body>
+<script>
+    function validarLetras(e) {
+        let tecla = e.key;
+        let patron = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+        if (!patron.test(tecla)) {
+            e.target.style.borderColor = "red";
+            e.preventDefault();
+        } else {
+            e.target.style.borderColor = "#2d2d35";
+        }
+    }
+
+    function validarNumeros(e) {
+        let tecla = e.key;
+        let patron = /^[0-9]+$/;
+        if (!patron.test(tecla)) {
+            e.target.style.borderColor = "red";
+            e.preventDefault();
+        } else {
+            e.target.style.borderColor = "#2d2d35";
+        }
+    }
+
+    function validarCorreo(e) {
+        let tecla = e.key;
+        if (tecla === " ") {
+            e.target.style.borderColor = "red";
+            e.preventDefault();
+        } else {
+            e.target.style.borderColor = "#2d2d35";
+        }
+    }
+
+    function actualizarContador() {
+        let bio = document.getElementById("biografia");
+        let contador = document.getElementById("contador");
+        contador.innerHTML = bio.value.length + " caracteres";
+    }
+</script>
+</html>
